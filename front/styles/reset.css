@@ -1,0 +1,78 @@
+/* reset.css */
+
+/* Box-sizing border-box por defecto para todos los elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset de márgenes y relleno a cero */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul,
+dl,
+dd,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegurarse de que los elementos de lista tengan viñetas y márgenes controlados */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Ajustar estilos por defecto de encabezados */
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  font-weight: normal;
+} */
+
+/* Ajustar tamaño de fuente y estilo para elementos de texto */
+/* body {
+  line-height: 1.6;
+  font-size: 16px;
+} */
+
+/* Asegurarse de que las imágenes sean responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Eliminar decoración de texto para enlaces */
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* Asegurarse de que los elementos en línea sean visualmente alineados */
+abbr[title],
+abbr[data-original-title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+/* Establecer bordes a 0 para la consistencia en diferentes navegadores */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

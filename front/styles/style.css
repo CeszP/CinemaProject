@@ -1,0 +1,106 @@
+html{
+  background-color: #111;
+  color: #FFF;
+  font-family: "Josefin Sans", sans-serif;
+}
+h1, h2, h3{
+  color: #FABD4B;
+}
+nav{
+  border-bottom: 1px solid #FABD4B;
+  display: flex;
+  padding: 1em 5em;
+  justify-content: center;
+  align-items: center;
+}
+h4>label{
+  font-weight: normal;
+}
+footer{
+  height: 4em;
+  padding: 2em 0;
+  text-align: center;
+}
+/* NAVBAR */
+#navbar--icon{
+  border-right: solid #FABD4B 1px;
+  margin-right: .5em;
+  padding-right: .5em;
+  width: 8em;
+}
+#navbar--list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: auto;
+  width: 20em;
+}
+#navbar--list li a{
+  color: #FABD4B;
+  font-size: 1.5em;
+}
+/* CONTAINER */
+#container{
+  border-bottom: 1px solid #FABD4B;
+  display: flex;
+  flex-flow: column;
+}
+/* CARDS */
+.card--rate,.prime--rate{
+  font-size: 2em;
+  line-height: 1em;
+}
+/* PRIME */
+.prime--container{
+  align-items: center;
+  background-image: url('../assets/smoke_light.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 7em 0;
+  width: 100%;
+}
+.prime--img{
+  border-right: 3px #FABD4B solid;
+  margin-right: 3em;
+  padding-right: 3em;
+  height: 25em;
+}
+.prime--title{
+  font-size: 2em;
+  line-height:.5em;
+}
+.prime--year{
+  line-height: 2em;
+}
+.prime--info--container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2em;
+  user-select: none;
+}
+.rating--star{
+  width: 1.25em;
+}
+/* CATALOG */
+#catalog--container{
+  background-image: url('../assets/dark_colors.jpg');
+  background-size: cover;
+  border-top: 1px solid #FABD4B;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  padding: 2em 0;
+}
+.card{
+  margin-top: 3em;
+  text-align: center;
+  width: 30em;
+}
+.card--img{
+  height: 25em;
+}
+.card--info--container{
+  user-select: none;
+}
