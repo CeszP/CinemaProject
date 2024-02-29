@@ -69,7 +69,6 @@ const tempData = [
     poster:
       "https://m.media-amazon.com/images/I/51XpVpQbQQL.jpg",
   },
-  // https://m.media-amazon.com/images/I/71nQ9pOj6qL._AC_UF894,1000_QL80_.jpg
   {
     title: "Batman: The dark knight",
     year: 2008,
