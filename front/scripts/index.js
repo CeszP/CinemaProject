@@ -1,15 +1,16 @@
-function generateDivs(data){
+// IIFE Immediatly Invoked Function Expression
+(function generateDivs(){
     const primeCard = document.getElementById('prime--card')
     const newDiv  = document.createElement('div')
     
     // PRIME FILM
-    const mayorRate = data.reduce((max, actual) => {
+    const mayorRate = tempData.reduce((max, actual) => {
       return actual.rate > max.rate ? actual : max
-    },data[0])
+    },tempData[0])
 
     newDiv.classList.add('prime--container')
     newDiv.innerHTML = `
-    <a href="#"><img src="${mayorRate.poster}" alt="" class="prime--img"></a>
+    <img src="${mayorRate.poster}" class="prime--img" alt="">
     <div class="prime--info--container">
       <h3 class="prime--title">${mayorRate.title}</h3>
       <label class="prime--year">${mayorRate.year}</label>
@@ -26,10 +27,9 @@ function generateDivs(data){
     // ALL FILMS
     const container = document.getElementById('catalog--container')
 
-    data.forEach(item => {
+    tempData.forEach(item => {
         const newDiv = document.createElement('div')
         newDiv.classList.add('card')
-
         newDiv.innerHTML = `
         <a href=#>
           <img src="${item.poster}" alt="" class="card--img">
@@ -44,5 +44,4 @@ function generateDivs(data){
         `
         container.appendChild(newDiv)
     });
-}
-generateDivs(tempData)
+})()
