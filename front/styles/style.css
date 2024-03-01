@@ -158,9 +158,10 @@ button{
 }
 #aboutus--info{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: justify;
-  align-items: center;
+  /* align-items: center; */
   padding-right: 8em;
 }
 
