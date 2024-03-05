@@ -42,7 +42,7 @@ button{
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-left: auto;
-  width: 20em;
+  width: 30em;
 }
 #navbar--list li a{
   color: #FABD4B;

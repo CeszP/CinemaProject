@@ -1,15 +1,29 @@
-// IIFE Immediatly Invoked Function Expression
-(function generateDivs(){
-    const primeCard = document.getElementById('prime--card')
-    const newDiv  = document.createElement('div')
-    
-    // PRIME FILM
-    const mayorRate = tempData.reduce((max, actual) => {
-      return actual.rate > max.rate ? actual : max
-    },tempData[0])
+const URL = "https://students-api.2.us-1.fl0.io/movies"
+const getMovies = () => {
+  console.log("Getting movies")
+  $.ajax({
+    url: URL,
+    method: "GET",
+    success: function (response) {
+      renderData(response)
+    },
+    error: function (error) {
+      console.log(error)
+    }
+  })
+}
 
-    newDiv.classList.add('prime--container')
-    newDiv.innerHTML = `
+const renderData = (tempData) => {
+  const primeCard = document.getElementById('prime--card')
+  const newDiv = document.createElement('div')
+
+  // PRIME FILM
+  const mayorRate = tempData.reduce((max, actual) => {
+    return actual.rate > max.rate ? actual : max
+  }, tempData[0])
+
+  newDiv.classList.add('prime--container')
+  newDiv.innerHTML = `
     <img src="${mayorRate.poster}" class="prime--img" alt="">
     <div class="prime--info--container">
       <h3 class="prime--title">${mayorRate.title}</h3>
@@ -22,15 +36,15 @@
       </div>      
     </div>
     `
-    primeCard.appendChild(newDiv)
-    
-    // ALL FILMS
-    const container = document.getElementById('catalog--container')
+  primeCard.appendChild(newDiv)
 
-    tempData.forEach(item => {
-        const newDiv = document.createElement('div')
-        newDiv.classList.add('card')
-        newDiv.innerHTML = `
+  // ALL FILMS
+  const container = document.getElementById('catalog--container')
+
+  tempData.forEach(item => {
+    const newDiv = document.createElement('div')
+    newDiv.classList.add('card')
+    newDiv.innerHTML = `
         <a href=#>
           <img src="${item.poster}" alt="" class="card--img">
         </a>
@@ -42,6 +56,7 @@
           <label class="card--rate">${item.rate}</label><img class="rating--star" src="./assets/rating_star.png">
         </div>
         `
-        container.appendChild(newDiv)
-    });
-})()
+    container.appendChild(newDiv)
+  });
+}
+getMovies()
